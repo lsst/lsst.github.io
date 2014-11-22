@@ -1,0 +1,11 @@
+body {
+  padding-top: 50px;
+}
+.lsst {
+  padding: 40px 15px;
+  text-align: center;
+}
+.jumbotron {
+  background-image: url("m2-sdss.jpg");
+  background-size: cover;
+}
