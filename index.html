@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!-- link rel="icon" href="../../favicon.ico" -->
 
-    <title>Starter Template for Bootstrap</title>
+    <title>LSST Data Management</title>
 
     <!-- Latest compiled and minified CSS -->
     <!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
@@ -35,33 +35,67 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">LSST Software Stack</a>
+          <a class="navbar-brand" href="#">LSST Data Management</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#about">About</a></li>
-            <li><a href="#about">Documentation</a></li>
-            <li><a href="#code">Code</a></li>
-            <li><a href="#jobs">Jobs</a></li>
-            <li><a href="#join">Getting Involved</a></li>
+            <li class="active"><a href="#dm">About</a></li>
+            <!-- li><a href="#about">Documentation</a></li -->
+            <!-- li><a href="#code">Code</a></li -->
+            <li><a href="#jobs">Join Us</a></li>
+            <!-- li><a href="#join">Getting Involved</a></li -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="color: #a0a0a0; margin-bottom: 0px;">
-      <div class="container">
-        <h1>LSST Software Stack</h1>
-        <p>An effort to build a high-performance, scalable, general purpose, open source O/IR survey data processing and analysis system. A deliverable of the <a href="http://project.lsst.org">LSST Project</a>.</p>
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+	  <div style="background:url(lsst2.jpg) top right; background-size:cover;" class="slider-size">
+            <div class="carousel-caption" style="text-align: left; top: 0; bottom: auto;">
+	        <h1>Large Synoptic Survey Telescope</h1>
+	        <p>The most ambitious astronomical survey ever attempted.</p>
+              <p><a class="btn btn-lg btn-primary" href="#lsst" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+	  <div style="background:url(m2-sdss.jpg) bottom left; background-size:cover;" class="slider-size">
+            <div class="carousel-caption">
+	        <h1>LSST Data Management</h1>
+       		<p>Building a high-performance, scalable, general purpose, open source O/IR survey data processing and analysis system.</p>
+		<p>A subsystem of the <a href="http://project.lsst.org">LSST Project</a>.</p>
+              <p><a class="btn btn-lg btn-primary" href="#dm" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
 
 
     <div class="container-fluid" style="background: #e0e0e0;">
     <div class="container">
 
-      <div style="text-align: center;">
+      <div style="text-align: center;" id="dm">
 	<h1>Enabling LSST by developing a modern data processing suite for optical survey
 astronomy.</h1>
         <br/>
@@ -72,7 +106,7 @@ astronomy.</h1>
           <h2>Science Pipelines</h2>
           <p>
 
-	The science pipelines implement the core image processing and data
+	The <b>LSST Science Pipelines</b> will implement the core image processing and data
 	analysis algorithms needed to process optical survey imaging data at
 	low latency and large scale.  Pipelines are being written for
 	single-epoch image processing, coaddition, image differencing,
@@ -86,8 +120,8 @@ astronomy.</h1>
           <p>
 
 	To satisfy the need to efficiently store, query, and analyze catalogs
-	running into trillions of rows and petabytes of data, we are implementing
-	Qserv, a distributed shared-nothing SQL database query system.
+	running into trillions of rows and petabytes of data, we are developing
+	<a href="http://ls.st/kth">Qserv</a>, a distributed shared-nothing SQL database query system.
 
           </p>
         </div>
@@ -95,7 +129,7 @@ astronomy.</h1>
           <h2>User Interface</h2>
           <p>
 	Writing archive user interfaces that will allow thousands of users
-        to query and visualize LSST data.
+        to query, visualize, and analyze petabytes of LSST data.
           </p>
         </div>
       </div>
@@ -153,7 +187,7 @@ astronomy.</h1>
 
 
 
-    <div class="jumbotron" style='background-image: url("lsst2.jpg");'>
+    <div class="jumbotron" style='background-image: url("lsst2.jpg");' id="lsst">
       <div class="container">
         <h1>Large Synoptic Survey Telescope</h1>
         <p>The most ambitious astronomical survey ever attempted.</p>
@@ -194,7 +228,8 @@ astronomy.</h1>
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- script src="js/bootstrap.min.js"></script -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- script src="../../assets/js/ie10-viewport-bug-workaround.js"></script -->
   </body>
