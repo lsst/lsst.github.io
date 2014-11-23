@@ -62,21 +62,21 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-	  <div style="background:url(lsst2.jpg) top right; background-size:cover;" class="slider-size">
-            <div class="carousel-caption" style="text-align: left; top: 0; bottom: auto;">
-	        <h1>Large Synoptic Survey Telescope</h1>
-	        <p>The most ambitious astronomical survey ever attempted.</p>
-              <p><a class="btn btn-lg btn-primary" href="#lsst" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
 	  <div style="background:url(m2-sdss.jpg) bottom left; background-size:cover;" class="slider-size">
             <div class="carousel-caption">
 	        <h1>LSST Data Management</h1>
        		<p>Building a high-performance, scalable, general purpose, open source O/IR survey data processing and analysis system.</p>
 		<p>A subsystem of the <a href="http://project.lsst.org">LSST Project</a>.</p>
               <p><a class="btn btn-lg btn-primary" href="#dm" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+	  <div style="background:url(lsst2.jpg) top right; background-size:cover;" class="slider-size">
+            <div class="carousel-caption" style="text-align: left; top: 0; bottom: auto;">
+	        <h1>Large Synoptic Survey Telescope</h1>
+	        <p>The most ambitious astronomical survey ever attempted.</p>
+              <p><a class="btn btn-lg btn-primary" href="#lsst" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -232,5 +232,9 @@ astronomy.</h1>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- script src="../../assets/js/ie10-viewport-bug-workaround.js"></script -->
+
+    <script>
+      $('.carousel').carousel({ interval: 8000 });
+    </script>       
   </body>
 </html>
