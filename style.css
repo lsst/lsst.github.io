@@ -38,3 +38,7 @@ body {
 .slider-size {
   height: 400px; /* This is your slider height */
 }
+
+.container-fluid {
+  padding-bottom: 2ex;
+}
