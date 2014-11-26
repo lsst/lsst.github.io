@@ -61,7 +61,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-         <div style="background:url(m2-sdss.jpg) bottom left; background-size:cover;" class="slider-size">
+          <div class="slider-size" id="carousel-dm">
             <div class="carousel-caption">
                 <h1>LSST Data Management</h1>
                        <p>Building a high-performance, scalable, general purpose, open source O/IR survey data processing and analysis system.</p>
@@ -71,8 +71,8 @@
           </div>
         </div>
         <div class="item">
-          <div style="background:url(lsst2.jpg) top right; background-size:cover;" class="slider-size">
-            <div class="carousel-caption" style="text-align: left; top: 0; bottom: auto;">
+          <div class="slider-size" id="carousel-lsst">
+            <div class="carousel-caption">
                 <h1>Large Synoptic Survey Telescope</h1>
                 <p>The most ambitious astronomical survey ever attempted.</p>
               <p><a class="btn btn-lg btn-primary" href="#lsst" role="button">Learn more &raquo;</a></p>
@@ -91,10 +91,10 @@
     </div><!-- /.carousel -->
 
 
-    <div class="container-fluid" style="background: #e0e0e0;">
+    <div class="container-fluid" id="dm">
     <div class="container">
 
-      <div style="text-align: center;" id="dm">
+      <div>
         <h1>Enabling LSST by developing a modern data processing suite for optical survey
 astronomy.</h1>
       </div>
@@ -156,10 +156,9 @@ astronomy.</h1>
     </div>
 
 
-    <div class="container-fluid" style="background: #ffffff;" id="jobs">
+    <div class="container-fluid" id="jobs">
       <div class="lsst">
-
-    <h2>We are hiring</h2>
+        <h1>We are hiring</h1>
     <div class="container">
       <div class="row">
         <div class="col-xs-6 col-sm-4 col-md-2">
@@ -193,7 +192,7 @@ astronomy.</h1>
 
 
 
-    <div class="jumbotron" style='background-image: url("lsst2.jpg");' id="lsst">
+    <div class="jumbotron" id="lsst">
       <div class="container">
         <h1>Large Synoptic Survey Telescope</h1>
         <p>The most ambitious astronomical survey ever attempted.</p>
@@ -222,7 +221,7 @@ astronomy.</h1>
         seconds.
         LSST data processing stack will be open source (GPL v3).
           </p>
-          <p><a class="btn btn-default" href="http://lsst.org/lsst/science/overview" role="button">Learn more about the science of LSST &raquo;</a></p>
+          <p id="learn-more-science"><a class="btn btn-default" href="http://lsst.org/lsst/science/overview" role="button">Learn more about the science of LSST &raquo;</a></p>
         </div>
       </div>
 

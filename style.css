@@ -39,6 +39,47 @@ body {
   height: 400px; /* This is your slider height */
 }
 
+#dm {
+  background-color: #e0e0e0;
+}
+
+#jobs {
+  background-color: #ffffff;
+}
+
 .container-fluid {
+  padding-bottom: 2ex;
+}
+
+.logo {
+  height: 50px; width: auto; margin: 10px;
+}
+
+#carousel-dm {
+  background: url(m2-sdss.jpg) bottom left;
+  background-size: cover;
+}
+
+#carousel-lsst {
+  background: url(lsst2.jpg) top right;
+  background-size: cover;
+}
+
+#lsst {
+  background-image: url(lsst2.jpg);
+}
+
+#carousel-lsst .carousel-caption {
+  text-align: left;
+  top: 0;
+  bottom: auto;
+}
+
+#dm div div h1 {
+  text-align: center;
+}
+
+#learn-more-science {
+  padding-top: 2ex;
   padding-bottom: 2ex;
 }
