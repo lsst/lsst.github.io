@@ -11,7 +11,6 @@
     <title>LSST Data Management</title>
 
     <!-- Latest compiled and minified CSS -->
-    <!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
@@ -62,20 +61,20 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-	  <div style="background:url(m2-sdss.jpg) bottom left; background-size:cover;" class="slider-size">
+          <div class="slider-size" id="carousel-dm">
             <div class="carousel-caption">
-	        <h1>LSST Data Management</h1>
-       		<p>Building a high-performance, scalable, general purpose, open source O/IR survey data processing and analysis system.</p>
-		<p>A subsystem of the <a href="http://project.lsst.org">LSST Project</a>.</p>
+                <h1>LSST Data Management</h1>
+                       <p>Building a high-performance, scalable, general purpose, open source O/IR survey data processing and analysis system.</p>
+                <p>A subsystem of the <a href="http://project.lsst.org">LSST Project</a>.</p>
               <p><a class="btn btn-lg btn-primary" href="#dm" role="button">Learn more &raquo;</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-	  <div style="background:url(lsst2.jpg) top right; background-size:cover;" class="slider-size">
-            <div class="carousel-caption" style="text-align: left; top: 0; bottom: auto;">
-	        <h1>Large Synoptic Survey Telescope</h1>
-	        <p>The most ambitious astronomical survey ever attempted.</p>
+          <div class="slider-size" id="carousel-lsst">
+            <div class="carousel-caption">
+                <h1>Large Synoptic Survey Telescope</h1>
+                <p>The most ambitious astronomical survey ever attempted.</p>
               <p><a class="btn btn-lg btn-primary" href="#lsst" role="button">Learn more &raquo;</a></p>
             </div>
           </div>
@@ -92,13 +91,12 @@
     </div><!-- /.carousel -->
 
 
-    <div class="container-fluid" style="background: #e0e0e0;">
+    <div class="container-fluid" id="dm">
     <div class="container">
 
-      <div style="text-align: center;" id="dm">
-	<h1>Enabling LSST by developing a modern data processing suite for optical survey
+      <div>
+        <h1>Enabling LSST by developing a modern data processing suite for optical survey
 astronomy.</h1>
-        <br/>
       </div>
 
       <div class="row">
@@ -106,12 +104,12 @@ astronomy.</h1>
           <h2>Science Pipelines</h2>
           <p>
 
-	The <b>LSST Science Pipelines</b> will implement the core image processing and data
-	analysis algorithms needed to process optical survey imaging data at
-	low latency and unprecedented scale and accuracy.  We are writing pipelines for
-	single-epoch image processing, coaddition, image differencing,
-	optimal multi-epoch measurements, (global) photometric and
-	astrometric calibration, among others.
+        The <b>LSST Science Pipelines</b> will implement the core image processing and data
+        analysis algorithms needed to process optical survey imaging data at
+        low latency and unprecedented scale and accuracy.  We are writing pipelines for
+        single-epoch image processing, coaddition, image differencing,
+        optimal multi-epoch measurements, (global) photometric and
+        astrometric calibration, among others.
        </p>
 
        </div>
@@ -119,16 +117,16 @@ astronomy.</h1>
           <h2>Scalable Database</h2>
           <p>
 
-	To satisfy the need to efficiently store, query, and analyze catalogs
-	running into trillions of rows and petabytes of data, we are developing
-	<a href="http://ls.st/kth">Qserv</a>, a distributed shared-nothing SQL database query system.
+        To satisfy the need to efficiently store, query, and analyze catalogs
+        running into trillions of rows and petabytes of data, we are developing
+        <a href="http://ls.st/kth">Qserv</a>, a distributed shared-nothing SQL database query system.
 
           </p>
         </div>
         <div class="col-md-4">
           <h2>User Interface</h2>
           <p>
-	We are writing archive user interfaces that will allow thousands of users
+        We are writing archive user interfaces that will allow thousands of users
         to query, visualize, and analyze petabytes of LSST data.
           </p>
         </div>
@@ -138,52 +136,63 @@ astronomy.</h1>
         <div class="col-md-6">
           <h2>Data Access Middleware</h2>
           <p>
-	We are creating extensible middleware to transparently access data
-	irrespective of storage location or format.
-	</p>
+        We are creating extensible middleware to transparently access data
+        irrespective of storage location or format.
+        </p>
 
         </div>
         <div class="col-md-6">
           <h2>Distributed Execution</h2>
           <p>
 
-	We are building software to orchestrate the execution and monitor the progress of
-	processing on tens of thousands of cores.
+        We are building software to orchestrate the execution and monitor the progress of
+        processing on tens of thousands of cores.
 
           </p>
         </div>
       </div>
 
-    <br/>
     </div><!-- /.container -->
     </div>
 
 
-    <div class="container-fluid" style="background: #ffffff;" id="jobs">
-	<div class="lsst">
+    <div class="container-fluid" id="jobs">
+      <div class="lsst">
+        <h1>We are hiring</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <img src="logos/lsst.png" class="logo" alt="LSST Headquarters">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <img src="logos/princeton.png" class="logo" alt="Princeton University">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <img src="logos/uw.png" class="logo" alt="University of Washington">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <img src="logos/ncsa.png" class="logo" alt="NCSA">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <img src="logos/slac.png" class="logo" alt="SLAC National Accelerator Lab">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <img src="logos/noao.png" class="logo" alt="NOAO">
+        </div>
+      </div>
+      <a class="btn btn-lg btn-primary" href="http://lsst.org/hiring" role="button">Learn more &raquo;</a>
 
-    <h2>We are hiring</h2>
 
-	<p>
-		<img src="logos/lsst.png" style="height: 50px; width: auto; margin: 10px;">
-		<img src="logos/princeton.png" style="height: 50px; width: auto; margin: 10px;">
-		<img src="logos/uw.png" style="height: 50px; width: auto; margin: 10px;">
-		<img src="logos/ncsa.png" style="height: 50px; width: auto; margin: 10px;">
-		<img src="logos/slac.png" style="height: 50px; width: auto; margin: 10px;">
-		<img src="logos/noao.png" style="height: 50px; width: auto; margin: 10px;">
-		<br />
-	</p>
-	<a class="btn btn-lg btn-primary" href="http://lsst.org/hiring" role="button">Learn more &raquo;</a>
+    </div>
 
-
-	</div>
+    </div>
 
     </div>
 
 
 
 
-    <div class="jumbotron" style='background-image: url("lsst2.jpg");' id="lsst">
+    <div class="jumbotron" id="lsst">
       <div class="container">
         <h1>Large Synoptic Survey Telescope</h1>
         <p>The most ambitious astronomical survey ever attempted.</p>
@@ -206,15 +215,13 @@ astronomy.</h1>
           <h2>Open Data, Open Source</h2>
           <p>
 
-	LSST data will be available with no proprietary period to
-	all astronomers in the United States, Chile, and International Partners.
-	Alerts about variable sources will be available world-wide within 60
-	seconds.
-	LSST data processing stack will be open source (GPL v3).
+        LSST data will be available with no proprietary period to
+        all astronomers in the United States, Chile, and International Partners.
+        Alerts about variable sources will be available world-wide within 60
+        seconds.
+        LSST data processing stack will be open source (GPL v3).
           </p>
-	  <br/>
-          <p><a class="btn btn-default" href="http://lsst.org/lsst/science/overview" role="button">Learn more about the science of LSST &raquo;</a></p>
-	  <br/>
+          <p id="learn-more-science"><a class="btn btn-default" href="http://lsst.org/lsst/science/overview" role="button">Learn more about the science of LSST &raquo;</a></p>
         </div>
       </div>
 
@@ -224,7 +231,6 @@ astronomy.</h1>
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- script src="js/bootstrap.min.js"></script -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- script src="../../assets/js/ie10-viewport-bug-workaround.js"></script -->
