@@ -3,7 +3,6 @@ body {
 }
 .lsst {
   padding: 40px 15px;
-  text-align: center;
 }
 .jumbotron {
   background-image: url("m2-sdss.jpg");
@@ -43,16 +42,25 @@ body {
   background-color: #e0e0e0;
 }
 
+#lsst {
+/*  background-color: #e0e0e0; */
+  background: url(lsst2.jpg) top right;
+  background-size: cover;
+  height: 400px;
+}
+
 #jobs {
   background-color: #ffffff;
 }
 
 .container-fluid {
-  padding-bottom: 2ex;
+  padding-bottom: 3ex;
+  padding-top: 2ex;
+  border-top: solid #aaa thin;
 }
 
 .logo {
-  height: 50px; width: auto; margin: 10px;
+  height: 30px; width: auto; margin: 10px;
 }
 
 #carousel-dm {
@@ -63,10 +71,6 @@ body {
 #carousel-lsst {
   background: url(lsst2.jpg) top right;
   background-size: cover;
-}
-
-#lsst {
-  background-image: url(lsst2.jpg);
 }
 
 #carousel-lsst .carousel-caption {
