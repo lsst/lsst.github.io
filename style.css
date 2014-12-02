@@ -63,6 +63,10 @@ body {
   height: 30px; width: auto; margin: 10px;
 }
 
+.logo-agency {
+  height: 60px; width: auto; margin: 10px;
+}
+
 #carousel-dm {
   background: url(m2-sdss.jpg) bottom left;
   background-size: cover;
