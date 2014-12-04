@@ -53,7 +53,16 @@ body {
 }
 
 #jobs {
-  background-color: #ffffff;
+  background-color: #e0e0e0;
+}
+
+.code {
+  background-color: #000;
+  color: #8f8;
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+  margin-left: 2ex;
+  margin-right: 2ex;
 }
 
 .container-fluid {
@@ -63,11 +72,11 @@ body {
 }
 
 .logo {
-  height: 20px; width: auto; margin: 10px;
+  height: 25px; width: auto; margin: 10px;
 }
 
 .logo-agency {
-  height: 40px; width: auto; margin: 10px;
+  height: 50px; width: auto; margin: 10px;
 }
 
 #carousel-dm {

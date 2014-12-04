@@ -49,11 +49,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#dm">About LSST/DM</a></li>
             <!-- li><a href="#about">Documentation</a></li -->
-            <!-- li><a href="#code">Code</a></li -->
-            <li><a href="#jobs">Join Us</a></li>
-            <!-- li><a href="#join">Getting Involved</a></li -->
+            <li><a href="#code">Getting the Code</a></li>
+            <li><a href="#jobs">Getting Involved</a></li>
+            <li><a href="#lsst">About LSST</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -77,7 +76,7 @@
                 <h1>LSST Data Management</h1>
                        <p>Building a high-performance, scalable, general purpose, open source O/IR survey data processing and analysis system.</p>
                 <p>A subsystem of the <a href="http://project.lsst.org">LSST Project</a>.</p>
-              <p><a class="btn btn-lg btn-primary" href="#dm" role="button">Learn more &raquo;</a></p>
+                <div style="height: 40px;">&nbsp;</div> <!-- some padding to vertically center the text better -->
             </div>
           </div>
         </div>
@@ -104,15 +103,70 @@
 
 
 
+    <div class="container-fluid" id="intro">
+      <div class="container">
+        <h1>Building the Next-Generation Data Processing System</h1>
+        <br>
+
+        <div class="row">
+        <div class="col-md-9">
+        <p>
+        <a href="#lsst">The LSST</a> is a large optical survey project funded by the National Science 
+        Foundation and the Department of Energy. It will continually image the sky,
+        identify changes in near real time, and over a decade of operations collect tens
+        of petabytes of data building up the deepest, widest, image of the Universe.
+        Its data will enable a range of science goals: from identification of
+        Near Earth Asteroids, to understanding the nature of Dark Energy.
+        </p>
+
+	<p>
+	A survey of this scale requires significant computing resources, but
+	also a modern, high-performance, scalable, data processing and
+	analysis system.  The LSST Data Management team is guiding an
+	effort to build such a suite. Primarily written in Python and C++,
+	open source, and comprised of modular codes ranging from science
+	pipelines to web user interfaces, the <b>LSST software stack</b>
+	will power the LSST and form a basis that other projects can
+	reuse in the future.
+	</p>
+        
+        </p>
+        <p>
+        The LSST DM team is distributed across a number of partner
+        institutions &mdash; the <a href="https://project.lsst.org">LSST Project
+        Office</a>, the <a href="http://www.ipac.caltech.edu">Infrared
+        Processing and Analysis Center</a>, the <a
+        href="http://ncsa.illinois.edu">National Center for Supercomputing
+        Applications</a>, <a href="http://www.astro.princeton.edu">Princeton
+        University</a>, <a href="http://slac.stanford.edu">SLAC National
+        Accelerator Laboratory</a>,
+        and the <a href="http://www.astro.washington.edu">University of
+        Washington</a> &mdash; but also helped by contributors from the community,
+        the LSST science collaborations, and other project subsystems.
+        </p>
+        </div>
+
+    <div class="col-md-3" style="text-align: center">
+          <img src="logos/nsf4.gif" class="logo-agency">
+          <img src="logos/doe.png" class="logo-agency">
+          <br/>
+          <img src="logos/lsst.png" class="logo" alt="LSST Headquarters">
+          <img src="logos/princeton.png" class="logo" alt="Princeton University">
+          <img src="logos/uw.png" class="logo" alt="University of Washington">
+          <img src="logos/ncsa.png" class="logo" alt="NCSA">
+          <img src="logos/ipac.png" class="logo" alt="IPAC">
+          <img src="logos/slac.png" class="logo" alt="SLAC National Accelerator Lab">
+          <img src="logos/noao.png" class="logo" alt="NOAO">
+    </div>
+    </div>
+    </div>
+    </div>
+
+
 
 
     <div class="container-fluid" id="dm">
     <div class="container">
-
-      <div>
-        <h1>Enabling LSST by developing a modern data processing suite for optical survey
-astronomy.</h1>
-      </div>
 
       <div class="row">
         <div class="col-md-4">
@@ -175,64 +229,73 @@ astronomy.</h1>
 
 
 
+    <div class="container-fluid" id="code">
+    <div class="container">
+    
+    <h1>Getting the Code</h1>
 
+    <p>LSST data processing codes are being developed in an iterative, agile, fashon. Though the
+    first light is still six years away, prototype versions of
+    a number of LSST data processing codes already exist and are being
+    tested on simulations and applied to existing surveys (e.g., the SDSS,
+    or the HSC Survey).
+    </p>
+
+    <p>
+    Though already state of the art in many areas, LSST software is
+    still in its infancy when it comes to end-user friendliness,
+    documentation, and API stability.  There is no binary distribution
+    &mdash; builds must be done from source.  Knowledge of Python (and
+    willingness to write some Python code) are necessary to work with the
+    current code base.
+
+    </p>
+
+    <p>
+    <b>At this stage, the LSST software will be of greatest interest to LSST
+    Science Collaborations, large survey builders (or those reprocessing
+    large survey data sets), and astronomical image processing
+    enthusiasts.</b>
+
+    If you're just looking to reduce a few observations 
+    with a ready-to-use tool, it may be better to look into one of the more
+    polished and/or established packages such as <a
+    href="http://www.astropy.org">AstroPy</a> or the <a
+    href="http://www.astromatic.net/">AstrOmatic</a> suite.
+    </p>
+
+    <h2>Installing</h2>
+    Assuming you have the prerequisites and are running <code>bash</code>:
+    <pre class="code">
+curl -O https://sw.lsstcorp.org/eupspkg/newinstall.sh
+bash newinstall.sh
+
+source loadLSST.bash
+
+eups distrib install -t v9_2 lsst_distrib</pre>
+    </p>
+    <p>
+    This will download and build from source a specific release of the LSST Stack (v9.2, in the example above).
+    For complete instructions, see the <a href="https://confluence.lsstcorp.org/display/LSWUG/Building+the+LSST+Stack+from+Source">documentation</a>.
+    </p>
+
+    <p>Once you've installed the stack, see <a href="https://confluence.lsstcorp.org/display/LSWUG/Using+the+LSST+Stack">here</a> for examples of what you can do with it.</p>
+
+    <h2>Cloning the sources</h2>
+    All LSST DM code is on <a href="http://github.com/LSST">GitHub</a>, spread across 100+ repositories.
+
+    You may find the <a href="https://confluence.lsstcorp.org/display/LDMDG/The+LSST+Software+Build+Tool">LSST software build tool</a>
+    helpful for cloning and (re)building from git. Feel free to subscribe to <a href="https://lists.lsst.org/mailman/listinfo/dm-devel">dm-devel</a> list
+    for help.
+
+    </div>
+    </div>
 
 
     <div class="container-fluid" id="jobs">
-      <div class="container">
-        <h1>Building the Next-Generation Data Processing System</h1>
-        <br>
-
-        <div class="row">
-        <div class="col-md-9">
-        <p>
-        The LSST is a large optical survey project funded by the National Science 
-        Foundation and the Department of Energy. It will continually image the sky,
-        identify changes in near real time, and over a decade of operations collect tens
-        of petabytes of data building up the deepest, widest, image of the Universe.
-        Its data will enable a range of science goals: from identification of
-        Near Earth asteroids, to understanding the nature of Dark Energy.
-        </p>
-
-	<p>
-
-	A survey of this scale requires a modern, high-performance,
-	scalable, data processing and analysis system.  We &mdash;
-	the LSST Data Management team &mdash; are building such a suite. 
-	Primarily written in Python and C++, open source, and comprised of
-	modular codes ranging from science pipelines to web user interfaces,
-	the <b>LSST software stack</b> will power the LSST and
-	form a basis for other surveys to reuse in the future.
-	</p>
-        
-        </p>
-        <p>
-        Our team is distributed across a number of partner
-        institutions: the <a href="https://project.lsst.org">LSST Project
-        Office</a>, the <a href="http://www.ipac.caltech.edu">Infrared
-        Processing and Analysis Center</a>, the <a
-        href="http://ncsa.illinois.edu">National Center for Supercomputing
-        Applications</a>, <a href="http://www.astro.princeton.edu">Princeton
-        University</a>, <a href="http://slac.stanford.edu">SLAC National
-        Laboratory</a>,
-        and the <a href="http://www.astro.washington.edu">University of
-        Washington</a>.
-        </p>
-        </div>
-
-    <div class="col-md-3" style="text-align: center">
-          <img src="logos/nsf4.gif" class="logo-agency">
-          <img src="logos/doe.png" class="logo-agency">
-          <img src="logos/lsst.png" class="logo" alt="LSST Headquarters">
-          <img src="logos/princeton.png" class="logo" alt="Princeton University">
-          <img src="logos/uw.png" class="logo" alt="University of Washington">
-          <img src="logos/ncsa.png" class="logo" alt="NCSA">
-          <img src="logos/ipac.png" class="logo" alt="IPAC">
-          <img src="logos/slac.png" class="logo" alt="SLAC National Accelerator Lab">
-          <img src="logos/noao.png" class="logo" alt="NOAO">
-    </div>
-    </div>
-
+    <div class="container">
+      <h1>Getting Involved</h1>
+      The real work to construct the LSST data processing system is just beginning, and there's ample room to get involved.
       <div class="row">
         <div class="col-md-6">
         <p>
@@ -243,7 +306,7 @@ astronomy.</h1>
         </p>
 
 	<p>
-	 Current job openings:
+	 Current LSST DM job openings:
          <ul>
           <li><a href="https://www.princeton.edu/astro/resources/job/jo/index.xml#comp000053ec018f00000009704da6">Princeton University: Postdoctoral Position in Software</a> (x2)
          </ul>
@@ -287,9 +350,7 @@ astronomy.</h1>
       </div>
     </div>
     </div>
-
     </div>
-
 
 
     <div class="container-fluid" id="lsst">
