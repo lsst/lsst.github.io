@@ -434,5 +434,42 @@ eups distrib install -t v9_2 lsst_distrib</pre>
     <script>
       $('.carousel').carousel({ interval: 8000 });
     </script>
+
+    <script>
+    // Bind 'active/inactive' class setting and scrolling effect to navbar links
+    // Note that we scroll to the position of the div minus 50px, to account for
+    // the size of the navbar.
+
+    $(document).ready(function () {
+        $('.nav li a').click(function(e) {
+
+            // active/inactive setting
+            $('.nav li').removeClass('active');
+            var $parent = $(this).parent();
+            if (!$parent.hasClass('active')) {
+                $parent.addClass('active');
+            }
+
+            // scrolling
+            var s = e.target.href.split("#");
+            if(s.length > 1) {
+              element = $("#" + s[1]);
+              if(element) {
+                e.preventDefault();
+                $('html,body').unbind().animate({scrollTop: $(element).offset().top-50}, 300);
+              }
+            }
+        });
+
+        // Bind the scrolling effect to the main logo
+        $('.navbar-brand').click(function(e) {
+            $('.nav li').removeClass('active');
+
+            e.preventDefault();
+            $('html,body').unbind().animate({scrollTop: 0}, 300);
+        });
+    });
+
+    </script>
   </body>
 </html>
