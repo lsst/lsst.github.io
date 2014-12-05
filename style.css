@@ -84,6 +84,10 @@ body {
   background-size: cover;
 }
 
+#carousel-dm .carousel-caption {
+  margin-bottom: 100px;
+}
+
 #carousel-lsst {
   background: url(lsst2.jpg) top right;
   background-size: cover;
