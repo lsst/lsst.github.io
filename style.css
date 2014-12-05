@@ -99,9 +99,9 @@ body {
   text-align: center;
 }
 
-#learn-more-science {
+.learn-more {
   padding-top: 2ex;
-  padding-bottom: 2ex;
+  text-align: right;
 }
 
 .right .github-fork-ribbon {
