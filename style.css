@@ -112,6 +112,10 @@ body {
   padding-bottom: 2ex;
 }
 
+.hint {
+  padding-top: 2ex;
+}
+
 .right .github-fork-ribbon {
   background-color: #888;
 }
