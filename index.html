@@ -467,7 +467,18 @@ eups distrib install -t v9_2 lsst_distrib</pre>
 
             e.preventDefault();
             $('html,body').unbind().animate({scrollTop: 0}, 300);
+
+            // Make sure the (collapsed) navbar is hidden after click
+            $("#navbar").collapse('hide');
         });
+    });
+
+    // Hide the collapsed navbar when clicked
+    // Taken from http://stackoverflow.com/questions/21203111/bootstrap-3-collapsed-menu-doesnt-close-on-click
+    $(document).on('click','.navbar-collapse.in',function(e) {
+       if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+          $(this).collapse('hide');
+       }
     });
 
     </script>
