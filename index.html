@@ -28,7 +28,6 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
       ga('create', 'UA-57287526-1', 'auto');
       ga('send', 'pageview');
     </script>
@@ -128,16 +127,16 @@
         <div class="row">
         <div class="col-md-9">
         <p>
-        <a href="#lsst">The LSST</a> is a large optical survey project funded by the National Science 
+        <a href="#lsst">The LSST</a> is a large optical survey project funded by the National Science
         Foundation and the Department of Energy. It will continually image the sky,
         identify changes in near real time, and over a decade of operations collect tens
         of petabytes of data building up the deepest, widest, image of the Universe.
-        Its data will enable a range of science goals: from identification of
-        Near Earth Asteroids, to understanding the nature of Dark Energy.
+        Its data will enable a range of science goals from identification of
+        Near Earth Asteroids to understanding the nature of Dark Energy.
         </p>
 
 	<p>
-	A survey of this scale requires significant computing resources, but
+	A survey of this scale requires significant computing resources but
 	also a modern, high-performance, scalable, data processing and
 	analysis system.  The LSST Data Management team is guiding an
 	effort to build such a suite. Primarily written in Python and C++,
@@ -146,8 +145,7 @@
 	will power the LSST and form a basis that other projects can
 	reuse in the future.
 	</p>
-        
-        </p>
+
         <p>
         The LSST DM team is distributed across a number of partner
         institutions &mdash; the <a href="https://project.lsst.org">LSST Project
@@ -164,8 +162,8 @@
         </div>
 
     <div class="col-md-3" id="logos">
-          <img src="logos/nsf4.gif" class="logo-agency">
-          <img src="logos/doe.png" class="logo-agency">
+          <img src="logos/nsf4.gif" class="logo-agency" alt="NSF">
+          <img src="logos/doe.png" class="logo-agency" alt="DOE">
           <br/>
           <img src="logos/lsst.png" class="logo" alt="LSST Headquarters">
           <img src="logos/princeton.png" class="logo" alt="Princeton University">
@@ -194,7 +192,7 @@
         analysis algorithms needed to process optical survey imaging data at
         low latency and unprecedented scale and accuracy.  We are writing pipelines for
         single-epoch image processing, coaddition, image differencing,
-        optimal multi-epoch measurements, (global) photometric and
+        optimal multi-epoch measurements, and (global) photometric and
         astrometric calibration, among others.
 
        </p>
@@ -215,7 +213,7 @@
           <p>
         One of the most important jobs of a large survey is to provide access.
         This includes access to catalogs, processed images, and raw images.  Access in the next generation
-        of surveys will extend to visualization and analysis.  We are writing interfaces 
+        of surveys will extend to visualization and analysis.  We are writing interfaces
         that will allow thousands of users to query, download, visualize, and analyze petabytes of LSST data.
           </p>
         </div>
@@ -225,7 +223,7 @@
         <div class="col-md-6">
           <h2>Data Access Middleware</h2>
           <p>
-        In order to build a scalable, portable processing system, we are creating extensible 
+        In order to build a scalable, portable processing system, we are creating extensible
         middleware to transparently access data irrespective of storage location or format.
         </p>
 
@@ -248,21 +246,21 @@
 
     <div class="container-fluid" id="code">
     <div class="container">
-    
+
     <h1>Getting the Code</h1>
 
-    <p>LSST data processing codes are being developed in an iterative, agile, fashon. Though the
+    <p>The LSST data processing codes are being developed in an iterative, agile, fashion. Though engineering
     first light is still six years away, prototype versions of
-    a number of LSST codes are already being 
-    tested on simulations and applied to existing data (e.g., 
-    <a href="https://dev.lsstcorp.org/trac/wiki/DC/Winter2013">reprocessing the SDSS Stripe 82</a>,
+    a number of LSST codes are already being
+    tested on simulations and being applied to existing data (e.g.,
+    <a href="https://dev.lsstcorp.org/trac/wiki/DC/Winter2013">reprocessing SDSS Stripe 82</a>,
     or <a href="http://subarutelescope.org/Projects/HSC/HSCProject.html">processing HSC Survey data</a>).
     </p>
 
     <p>
-    While already the state of the art in many areas, LSST software is
+    While already state-of-the-art in many areas, LSST software is
     still in its infancy when it comes to end-user friendliness,
-    documentation, and API stability.  There is no binary distribution
+    documentation, and API stability.  There is no binary distribution yet
     &mdash; builds must be done from source.  Knowledge of Python (and
     willingness to write some Python code) are necessary to work with the
     current code base.
@@ -270,12 +268,12 @@
     </p>
 
     <p>
-    <span class="label label-warning">Warning</span> <b>At this stage, the LSST software will be of greatest interest to LSST
+    <span class="label label-warning">Warning</span> <b>At this stage, the LSST software will be of greatest interest to the LSST
     Science Collaborations, large survey builders (or those reprocessing
     large survey data sets), and astronomical image processing
     enthusiasts.</b>
 
-    If you're just looking to reduce a few observations 
+    If you're just looking to reduce a few observations
     with a ready-to-use tool, it may be better to look into one of the more
     polished and/or established packages such as <a
     href="http://www.astropy.org">AstroPy</a> or the <a
@@ -283,7 +281,9 @@
     </p>
 
     <h2>Installing</h2>
+    <p>
     Assuming you have the prerequisites and are running <code>bash</code>:
+    </p>
     <pre class="code">
 curl -O https://sw.lsstcorp.org/eupspkg/newinstall.sh
 bash newinstall.sh
@@ -291,7 +291,6 @@ bash newinstall.sh
 source loadLSST.bash
 
 eups distrib install -t v9_2 lsst_distrib</pre>
-    </p>
     <p>
     This will download and build from source a specific release of the LSST Stack (v9.2, in the example above).
     For complete instructions, see the <a href="https://confluence.lsstcorp.org/display/LSWUG/Building+the+LSST+Stack+from+Source">documentation</a>.
@@ -300,10 +299,10 @@ eups distrib install -t v9_2 lsst_distrib</pre>
     <p>Once you've installed the stack, see <a href="https://confluence.lsstcorp.org/display/LSWUG/Using+the+LSST+Stack">here</a> for examples of what you can do with it.</p>
 
     <h2>Cloning the sources</h2>
-    All LSST DM code is on <a href="http://github.com/LSST">GitHub</a>, spread across 100+ repositories.
+    All LSST DM code is visible on <a href="http://github.com/LSST">GitHub</a>, spread across 100+ repositories.
 
     You may find the <a href="https://confluence.lsstcorp.org/display/LDMDG/The+LSST+Software+Build+Tool">LSST software build tool</a>
-    helpful for cloning and (re)building from git. Feel free to subscribe to <a href="https://lists.lsst.org/mailman/listinfo/dm-devel">dm-devel</a> list
+    helpful for cloning and (re)building from git. Feel free to subscribe to the <a href="https://lists.lsst.org/mailman/listinfo/dm-devel">dm-devel</a> mailing list
     for help.
 
     </div>
@@ -316,14 +315,13 @@ eups distrib install -t v9_2 lsst_distrib</pre>
       The real work to construct the LSST data processing system is just beginning, and there's ample room to get involved.
       <div class="row">
         <div class="col-md-6">
-        <p>
          <h2>Join Us</h2>
+	 <p>
          We're in the process of assembling the team of 45+ scientists, software engineers,
         and IT experts needed to build, commission, and operate the data
         system for LSST.
         </p>
 
-	<div>
 	 <p>
 	 Current LSST DM job openings:
 	 </p>
@@ -336,9 +334,8 @@ eups distrib install -t v9_2 lsst_distrib</pre>
           <li><a href="https://jobregister.aas.org/job_view?JobID=49806">University of Washington: Research Scientist Positions</a> (x3)
          </ul>
          <ul>
-          <li><a href="https://ch.tbe.taleo.net/CH12/ats/careers/requisition.jsp?org=SLAC&cws=1&rid=1535">SLAC: Senior Software Engineer, Distributed Systems / Big Data</a>
+          <li><a href="https://ch.tbe.taleo.net/CH12/ats/careers/requisition.jsp?org=SLAC&amp;cws=1&amp;rid=1535">SLAC: Senior Software Engineer, Distributed Systems / Big Data</a>
          </ul>
-        </div>
 
 	<p class="hint">
 	<span class="label label-info">Hint</span> To receive e-mails for new LSST DM job openings, subscribe to
@@ -348,25 +345,25 @@ eups distrib install -t v9_2 lsst_distrib</pre>
         </div>
 
         <div class="col-md-6">
-        <p>
          <h2>Use, Modify, Contribute</h2>
-         The LSST Data Processing System, though still in early construction
+         <p>
+         The LSST data processing system, though still in an early construction
          phase, is an open source (GPLv3) software project
-         free for anyone to use, and open to contributions from the
+         free for anyone to use and is open to contributions from the
          community.
          </p>
          <p>
          We invite you to:
+	 </p>
          <ul>
           <li><a href="http://ls.st/ug">Learn more about LSST software</a>
           <li><a href="https://confluence.lsstcorp.org/x/HAE-/">Read about getting started</a>
           <li><a href="http://lists.lsst.org">Subscribe to the mailing lists</a>
           <li><a href="http://github.com/lsst">View the code on GitHub</a>
          </ul>
-        </p>
         <p>
-          PS: Yes, our documentation is... incomplete... We're working on it. In the meantime, 
-          feel free to subscribe and ask questions on our <a href="https://lists.lsst.org/mailman/listinfo/dm-users">dm-users</a> 
+          P.S.: Yes, our documentation is rather incomplete. We're working on it. In the meantime,
+          feel free to subscribe and ask questions on our <a href="https://lists.lsst.org/mailman/listinfo/dm-users">dm-users</a>
           or <a href="https://lists.lsst.org/mailman/listinfo/dm-devel">dm-devel</a> lists.
         </p>
       </div>
@@ -380,7 +377,7 @@ eups distrib install -t v9_2 lsst_distrib</pre>
         <h1>The LSST Survey</h1>
         <p>8.4 meter, wide-field, f/1.2 telescope.<br/>
         3.2 Gigapixel, 189 4k x 4k CCD camera, with 2-second readout.<br/>
-        PetaFLOP of computing power, hundreds of PB of storage, gigabit long-haul networks.</p>
+        PetaFLOPS of computing power, hundreds of PB of storage, gigabit long-haul networks.</p>
       </div>
       <div class="container">
         <h4>Turning the sky into a database.</h4>
@@ -399,7 +396,7 @@ eups distrib install -t v9_2 lsst_distrib</pre>
        </div>
         <div class="col-md-4">
           <h2>Rapid Discovery</h2>
-          <p>LSST will scan the visible sky once every three days, charting objects that change or move: from exploding supernovae to potentially hazardous near-Earth asteroids.</p>
+          <p>The LSST will scan the visible sky once every three days, charting objects that change or move: from exploding supernovae to potentially hazardous near-Earth asteroids.</p>
         </div>
         <div class="col-md-4">
           <h2>Open Data, Open Source</h2>
@@ -409,7 +406,7 @@ eups distrib install -t v9_2 lsst_distrib</pre>
         all astronomers in the United States, Chile, and International Partners.
         Alerts about variable sources will be available world-wide within 60
         seconds.
-        LSST data processing stack will be open source (GPL v3).
+        The LSST data processing stack will be open source (GPL v3).
           </p>
           <p id="learn-more-science"><a class="btn btn-primary" href="http://lsst.org/lsst/science/overview" role="button">Learn more about the science of LSST &raquo;</a></p>
         </div>
@@ -429,6 +426,6 @@ eups distrib install -t v9_2 lsst_distrib</pre>
 
     <script>
       $('.carousel').carousel({ interval: 8000 });
-    </script>       
+    </script>
   </body>
 </html>
