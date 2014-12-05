@@ -457,6 +457,7 @@ eups distrib install -t v9_2 lsst_distrib</pre>
               if(element) {
                 e.preventDefault();
                 $('html,body').unbind().animate({scrollTop: $(element).offset().top-50}, 300);
+                document.location.hash = "#" + s[1];
               }
             }
         });
@@ -466,6 +467,7 @@ eups distrib install -t v9_2 lsst_distrib</pre>
             $('.nav li').removeClass('active');
 
             e.preventDefault();
+            document.location.hash = "";
             $('html,body').unbind().animate({scrollTop: 0}, 300);
 
             // Make sure the (collapsed) navbar is hidden after click
