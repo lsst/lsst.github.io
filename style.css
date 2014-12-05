@@ -79,6 +79,10 @@ body {
   height: 50px; width: auto; margin: 10px;
 }
 
+#logos {
+  text-align: center;
+}
+
 #carousel-dm {
   background: url(m2-sdss.jpg) bottom left;
   background-size: cover;
