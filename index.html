@@ -469,7 +469,10 @@ eups distrib install -t v9_2 lsst_distrib</pre>
             $('html,body').unbind().animate({scrollTop: 0}, 300);
 
             // Make sure the (collapsed) navbar is hidden after click
-            $("#navbar").collapse('hide');
+            navbar = $(".navbar-collapse.in")
+            if(navbar.is(":visible")) {
+              navbar.collapse('hide');
+            }
         });
     });
 
