@@ -436,56 +436,76 @@ eups distrib install -t v9_2 lsst_distrib</pre>
     </script>
 
     <script>
-    // Bind 'active/inactive' class setting and scrolling effect to navbar links
-    // Note that we scroll to the position of the div minus 50px, to account for
-    // the size of the navbar.
+      // inspired by http://blog.thewebsitepeople.org/2011/05/jquery-scrolling-anchors/
+      // simplified and dropped compatibility with non-HTML5 browsers
+      $(document).ready(function()
+      {
+        /*
+          ****************************************************************
+          Bind to the hashchange event to:
+            1) Provide custom scrolling that takes into account the 
+               height of the navbar
+            2) Highlights the clicked navbar buttons (sets the active class)
+            3) Hide the collapsed menu on small devices, if it was visible
+          ****************************************************************
+        */
+        $(window).on('hashchange', function(e)
+        {
+          hash = location.hash == "" ? "#" : location.hash;
 
-    $(document).ready(function () {
-        $('.nav li a').click(function(e) {
+          // guard against trying to scroll to an inexistent target
+          if(element = $(hash)) {
+            // Note that we scroll to the position of the div minus 50px, to account for
+            // the size of the navbar.
+            scrollTo = hash != "#" ? element.offset().top - 50 : 0
+            $('html,body').animate({scrollTop: scrollTo}, 300);
+          }
 
-            // active/inactive setting
-            $('.nav li').removeClass('active');
-            var $parent = $(this).parent();
-            if (!$parent.hasClass('active')) {
-                $parent.addClass('active');
-            }
-
-            // scrolling
-            var s = e.target.href.split("#");
-            if(s.length > 1) {
-              element = $("#" + s[1]);
-              if(element) {
-                e.preventDefault();
-                $('html,body').unbind().animate({scrollTop: $(element).offset().top-50}, 300);
-                document.location.hash = "#" + s[1];
+          // active/inactive setting of navbar buttons
+          $('.nav li').removeClass('active');
+          anchor = $('.nav li a[href=' + hash + ']')
+          if(anchor) {
+              var $parent = anchor.parent();
+              if (!$parent.hasClass('active')) {
+                  $parent.addClass('active');
               }
-            }
-        });
+          }
 
-        // Bind the scrolling effect to the main logo
-        $('.navbar-brand').click(function(e) {
-            $('.nav li').removeClass('active');
-
-            e.preventDefault();
-            document.location.hash = "";
-            $('html,body').unbind().animate({scrollTop: 0}, 300);
-
-            // Make sure the (collapsed) navbar is hidden after click
-            navbar = $(".navbar-collapse.in")
-            if(navbar.is(":visible")) {
+          // On small screen devices, make sure the (collapsed) navbar is hidden
+          // after navigation
+          navbar = $(".navbar-collapse.in")
+          if(navbar.is(":visible")) {
               navbar.collapse('hide');
-            }
+          }
         });
-    });
 
-    // Hide the collapsed navbar when clicked
-    // Taken from http://stackoverflow.com/questions/21203111/bootstrap-3-collapsed-menu-doesnt-close-on-click
-    $(document).on('click','.navbar-collapse.in',function(e) {
-       if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-          $(this).collapse('hide');
-       }
-    });
+        /*
+          ****************************************************************
+          Hook into onClick handler of all anchors with fragment targets, and
+          override the default scrolling behavior.
+          ****************************************************************
+        */
+        $('a[href^="#"]').on('click', function(e)
+        {
+          // don't follow the link
+          e.preventDefault();
 
+          // Instead, update history without triggering automatic scrolling
+          hash = this.hash == "" ? "#" : this.hash;
+          history.pushState(null, null, hash);
+
+          $(window).trigger('hashchange');
+        });
+
+        /*
+          ****************************************************************
+          Trigger the initial 'hashchange' event on page load, so if scrolling
+          and navbar button highlighting gets done if the user directly
+          navigated to an achor within the page.
+          ****************************************************************
+        */
+        $(window).trigger('hashchange');
+      });
     </script>
   </body>
 </html>
