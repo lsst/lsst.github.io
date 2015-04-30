@@ -1,0 +1,36 @@
+var lsst_groups = [
+  {
+    "name":"Catalog Simulations",
+    "description":"Tools for simulating the LSST catalogs",
+    "category":"simulations"
+  },
+  {
+    "name":"Operations Simulations",
+    "description":"Tools for simulating the LSST cadence",
+    "category":"simulations"
+  },
+  {
+    "name":"Data Management",
+    "description":"Data management software",
+    "category":"dm"
+  },
+  {
+    "name":"Database",
+    "description":"LSST Database and Data Access",
+    "category":"dm"
+  },
+    {
+    "name":"EPO",
+    "description":" LSST Education and Public Outreach",
+    "category":"epo"
+  },
+  {
+    "name":" Telescope & Site ",
+    "description":" LSST Telescope and Site",
+    "category":"telescope"
+  },
+  {
+    "name":"Additional repositories",
+    "description":"Repositories that are not categorized into the existing groups"
+  },
+];

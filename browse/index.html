@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>LSST Code Repositories</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Loading list of repos and groups from JSON files -->
+    <script type="text/javascript" src="lsst-group.json"></script>
+    <script type="text/javascript" src="lsst-repo.json"></script>
+    <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/strftime.js"></script>
+    <script type="text/javascript" src="assets/lsstnamespace.js"></script>
+
+    <script>
+      var browserIsIELessThan10 = false;
+      if ($.browser.msie && parseInt($.browser.version, 10) < 10){
+        browserIsIELessThan10 = true;
+        }
+    </script>
+
+    <script type="text/javascript">
+    (function ($, undefined) {
+
+      var LSSTGlobal = window.LSSTGlobal;
+
+      function addGroupRepresentation(group) {
+        if (group) {
+          var $item = $("<li>").addClass("repo grid-1 " + group.category);
+          var $link = $("<a>").attr("href", "group.html?name=" + group.name).appendTo($item);
+          $link.append($("<h2>").text(group.name));
+          $link.append($("<p>").text(group.description));
+          $item.appendTo("#repos");
+          }
+      }
+
+      function processMembers(members) {
+          $(function () {
+            if (members) {
+              $("#num-members").text(members.length);
+            }
+          });
+        };
+
+      function addGroups(repoGroups) {
+        var repoGroups = lsst_groups;
+
+        $(function () {
+          $.each(repoGroups, function (i, group) {
+            addGroupRepresentation(group);
+          });
+        });
+
+      }
+      addGroups();
+
+
+      LSSTGlobal.processReposCallback = LSSTGlobal.addRecentlyUpdatedRepos;
+      LSSTGlobal.processMembersCallback = processMembers;
+
+      LSSTGlobal.initializeCache();
+      LSSTGlobal.findAllOrgsFromReposCatalog(lsst_repos);
+
+      if ( browserIsIELessThan10 ) {
+        LSSTGlobal.getReposFromOneOrg   = LSSTGlobal.getReposFromOneOrgWithoutCORS;
+        LSSTGlobal.getMembersFromOneOrg = LSSTGlobal.getMembersFromOneOrgWithoutCORS;
+        }
+
+      LSSTGlobal.getJSONIfModified = LSSTGlobal.getJSONIfModifiedWithCORS;
+      LSSTGlobal.getReposFromAllOrgs();
+      LSSTGlobal.getMembersFromAllOrgs();
+
+    })(jQuery);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div id="logo"><h1>LSST Code Repositories</h1></div>
+        <a href="http://lsst.github.io/">
+          <img src="images/logo.png" alt="LSST Logo" height="200" width="200">
+        </a>
+       <h2>Large Synoptic</h2>
+        <h2>Survey Telescope</h2>
+	<h2>Open Source Software</h2>
+        <p>Visit <a href="http://lsst.org/">lsst.org</a></p>
+        <p><a href="https://confluence.lsstcorp.org">Wiki Pages</a></p>
+      </div>
+
+      <div class="grid grid-3">
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated <a href="https://github.com/lsst/repositories">View All on GitHub</a></h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
+
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <a href="https://github.com/lsst/repositories"><span id="num-repos"><img src="images/spinner.gif" /></span> public repos</a>
+            <br>
+            <a href="https://github.com/lsst?tab=members"><span id="num-members"><img src="images/spinner.gif" /></span> members</a>
+          </p>
+          <p class="email"><a href="mailto:lsst@lsst.org">lsst@lsst.org</a></p>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <div id="category" class="grid-1 iota iotaleft categoryheader dm">
+          <h4>Data Management</h4>
+        </div>
+        <div id="category" class="grid-1 iota iotacenter categoryheader simulations">
+          <h4>Simulations</h4>
+        </div>
+        <div id="category" class="grid-1 iota iotaright categoryheader telescope">
+          <h4>Telescope</h4>
+        </div>
+      </div>
+      <div class="grid grid-3">
+        <div id="category" class="grid-1 iota iotaleft categoryheader epo">
+          <h4>EPO</h4>
+        </div>
+      </div>
+
+      <ol id="repos"></ol>
+    </div>
+  </body>
+</html>

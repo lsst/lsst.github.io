@@ -1,0 +1,750 @@
+var lsst_repos = [
+  {
+    "full_name":"lsst/sims_catUtils",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_catalogs_generation",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_catalogs_measures",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_coordUtils",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_data",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_dustmaps",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_maf",
+    "group":"Operations Simulations"
+  },
+  {
+    "full_name":"lsst/sims_operations",
+    "group":"Operations Simulations"
+  },
+  {
+    "full_name":"lsst/sims_photUtils",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_sed_library",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_selfcal",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sims_utils",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/sncosmo",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/throughputs",
+    "group":"Catalog Simulations"
+  },
+  {
+    "full_name":"lsst/db",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/dbserv",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/imgserv",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/metaserv",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/partition",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/qserv",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/qserv_distrib",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/sphgeom",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/webserv",
+    "group":"Database"
+  },
+  {
+    "full_name":"lsst/Dc2Report",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/LSSTPipe",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/S13report",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/W13report",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/activemqcpp",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/afw",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/afw-test",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/anaconda",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/analysis",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/antlr",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ap",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/apr",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/apr_util",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/astrocal",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/astrometry_net",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/base",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/boost",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/build",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/buildFiles",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/cat",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/catf",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/cfitsio",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/coadd_chisquared",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/coadd_kaiser",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/coadd_pipeline",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/coadd_utils",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/codecheck",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/cpptests",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_activemq",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_dc2pipe",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_dc3pipe",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_events",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_evmon",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_execute",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_mospipe",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_orca",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_pipevis",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_platform_gordon",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_platform_lonestar",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_platform_lsst",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_prepdc3a",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_prepdc3b",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_provenance",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_sched",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ctrl_stats",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/daf_base",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/daf_butlerUtils",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/daf_data",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/daf_ingest",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/daf_persistence",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/daf_replicate",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/datarel",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/db",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/dbserv",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/designReviews",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/detection",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/devtools",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/doc",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/doxygen",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/dui",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/eigen",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/expat",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/fftw",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/firefly",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/freetds",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/geom",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/git",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/gsl",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/healpy",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/imgserv",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ip_diffim",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ip_isr",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ip_pipeline",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ip_utils",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/kazoo",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/legacy-pex_harness",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/libevent",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsst",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsstDoxygen",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsst_apps",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsst_build",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsst_distrib",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsst_distrib_tool",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsst_libs",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsst_thirdparty",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lssteups",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsstserver",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lsstsw",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/lua",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/luaexpat",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/luasocket",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/luaxmlrpc",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/matplotlib",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/meas_algorithms",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/meas_astrom",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/meas_base",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/meas_deblender",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/meas_extensions_photometryKron",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/meas_extensions_shapeHSM",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/meas_modelfit",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/metaserv",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/minuit2",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/mops_daymops",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/mops_nightmops",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/mysql",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/mysqlclient",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/mysqlproxy",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/mysqlpython",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/ndarray",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/numpy",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/obs_cfht",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/obs_lsstSim",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/obs_sdss",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/obs_sst",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/obs_subaru",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/obs_test",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/obs_wiyn",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/palpy",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/partition",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pex_config",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pex_exceptions",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pex_logging",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pex_mpiharness",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pex_policy",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/photocal_analysis",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/photocal_auxtel",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pipe_base",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pipe_tasks",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pipette",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/protobuf",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pyephem",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pyfits",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pykg_config",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/pymssql",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/python",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/qserv",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/reportDC3a",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/scisql",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/scons",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/sconsUtils",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/sdqa",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/security",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/servertools",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/shapelet",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/skymap",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/skypix",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/sphgeom",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/sqlite",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/swig",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/templates",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/testMatrix",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/testing_displayQA",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/testing_endtoend",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/testing_pipeQA",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/twisted",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/update_hooks",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/utils",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/wcslib",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/webcommon",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/webserv",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/xpa",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/xrootd",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/zookeeper",
+    "group":"Data Management"
+  },
+  {
+    "full_name":"lsst/zopeinterface",
+    "group":"Data Management"
+  },
+];
