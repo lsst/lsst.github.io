@@ -76,7 +76,6 @@ a:hover {
 
 #category, div.categoryheader, li.repo {
   margin-bottom: 20px;
-  color: inherit;
 }
 
 
@@ -96,6 +95,7 @@ div.header {
 
 div.categoryheader {
   height: 30px;
+  color: white;
 }
 
 div.categoryheader h4 {
