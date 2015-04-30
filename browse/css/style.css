@@ -230,22 +230,22 @@ li.repo h3 {
 
 div.categoryheader.simulations {
   background: #0080b0;
-  color: #0080b0;
+  color: white;
 }
 
 div.categoryheader.dm {
   background: #6aad2d;
-  color: #6aad2d;
+  color: white;
 }
 
 div.categoryheader.telescope {
   background: #8f8f8f;
-  color: #8f8f8f;
+  color: white;
 }
 
 div.categoryheader.epo {
   background: #990000;
-  color: #990000;
+  color: white;
 }
 
 @keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
