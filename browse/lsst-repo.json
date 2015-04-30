@@ -17,7 +17,7 @@ var lsst_repos = [
   },
   {
     "full_name":"lsst/sims_data",
-    "group":"Catalog Simulations"
+    "group":"Operations Simulations"
   },
   {
     "full_name":"lsst/sims_dustmaps",
