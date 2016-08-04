@@ -288,34 +288,25 @@
     </p>
 
     <h2>Installing</h2>
-    <p>
-    Assuming you have the prerequisites and are running <code>bash</code>:
-    </p>
+
+    <p>There are several ways of installing the LSST Stack, including from <a href="https://pipelines.lsst.io/install/newinstall.html">source</a>, through <a href="https://pipelines.lsst.io/install/conda.html">Anaconda</a>, or as <a href="https://sqr-002.lsst.io">Docker containers</a>. Our <a href="https://pipelines.lsst.io/install/index.html">installation documentation</a> will get you started.</p>
+
+    <p>Here's how to install the <a href="https://pipelines.lsst.io/releases/notes.html">latest (v12) release</a> from source, given <a href="https://pipelines.lsst.io/install/newinstall.html#prerequisites">pre-requisites</a>:</p>
+
     <pre class="code">
-curl -O https://sw.lsstcorp.org/eupspkg/newinstall.sh
+curl -OL https://raw.githubusercontent.com/lsst/lsst/12.0/scripts/newinstall.sh
 bash newinstall.sh
 
 source loadLSST.bash
 
 eups distrib install -t v12_0 lsst_apps</pre>
-    <p>
-    This will download and build from source a specific release of the LSST
-    Stack (v12.0, in the example above).
-    </p>
-
-    <p>
-    For complete instructions, see the <a href="https://pipelines.lsst.io/">documentation</a>.
-    </p>
 
     <p>Once you've installed the stack, see <a href="https://confluence.lsstcorp.org/display/LSWUG/Using+the+LSST+Stack">here</a> for examples of what you can do with it.</p>
 
     <h2>Cloning the sources</h2>
-    All LSST DM code is visible on <a href="http://github.com/lsst">GitHub</a>, spread across 100+ repositories.
+    <p>All LSST DM code is visible on <a href="http://github.com/lsst">GitHub</a>, spread across 100+ repositories.</p>
 
-    You may find the <a href="https://confluence.lsstcorp.org/display/LDMDG/The+LSST+Software+Build+Tool">LSST software build tool</a>
-    helpful for cloning and (re)building from git. Feel free to subscribe to the <a href="https://lists.lsst.org/mailman/listinfo/dm-devel">dm-devel</a> mailing list
-    for help.
-
+    <p>The <a href="https://pipelines.lsst.io/install/lsstsw.html">LSST software build tool</a> is helpful for cloning and (re)building from git. Feel free to join DM Developers on the <a href="https://community.lsst.org">LSST Community forum</a> and ask for help in the <a href="https://community.lsst.org/c/support">Support</a> category.</p>
     </div>
     </div>
 
@@ -359,20 +350,13 @@ eups distrib install -t v12_0 lsst_apps</pre>
          free for anyone to use and is open to contributions from the
          community.
          </p>
-         <p>
-         We invite you to:
-	 </p>
+
+         <p>We invite you to:</p>
          <ul>
-          <li><a href="http://ls.st/ug">Learn more about LSST software</a>
-          <li><a href="https://confluence.lsstcorp.org/x/HAE-/">Read about getting started</a>
-          <li><a href="http://lists.lsst.org">Subscribe to the mailing lists</a>
+          <li><a href="http://pipelines.lsst.io">Read the documentation at pipelines.lsst.io</a>
+          <li><a href="https://community.lsst.org/c/dm">Join the conversation with DM on the LSST Community forum</a></li>
           <li><a href="http://github.com/lsst">View the code on GitHub</a>
          </ul>
-        <p>
-          P.S.: Yes, our documentation is rather incomplete. We're working on it. In the meantime,
-          feel free to subscribe and ask questions on our <a href="https://lists.lsst.org/mailman/listinfo/dm-users">dm-users</a>
-          or <a href="https://lists.lsst.org/mailman/listinfo/dm-devel">dm-devel</a> lists.
-        </p>
       </div>
     </div>
     </div>
